@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 
@@ -15,8 +16,11 @@
 }
 
 .menu {
+    padding-left: 73px;
+
     &__list {
         display: flex;
+
     }
 
     &__list-item+.menu__list-item {
@@ -226,6 +230,92 @@
         top: -1px;
         left: 14px;
 
+    }
+}
+
+.top-slider {
+    &__inner {
+        padding: 98px 0 83px;
+        background-color: $accent;
+
+    }
+
+    &__title {
+        @extend %rubik-700;
+        font-size: 72px;
+        color: $subtitle;
+        margin-bottom: 20px;
+        max-width: 431px;
+    }
+
+    &__text {
+        @extend %rubik-400;
+        color: $accent-dark;
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 30px;
+        max-width: 370px;
+    }
+
+    &__link {
+        background-color: $accent-blue;
+        color: #fff;
+        @extend %rubik-500;
+        font-size: 15px;
+        padding: 23px 100px 23px 27px;
+        display: block;
+        max-width: 200px;
+        position: relative;
+    }
+
+    &__link::after {
+        content: "";
+        position: absolute;
+        background-image: url(../images/arrow.svg);
+        width: 22px;
+        height: 9px;
+        top: 27px;
+        right: 20px;
+    }
+
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        transform:translateY(20px);
+        li{
+            margin-left: 13px;
+            button{
+                padding: 0;
+                border: none;
+                background-color: #fde3cc;
+                width: 29px;
+                height: 29px;
+                border-radius: 50%;
+                @extend %rubik-500;
+                font-size: 11px;
+                color: #667983;
+            }
+            &.slick-active{
+                button{
+                    background-color: #fff;
+                    color: $subtitle;
+                }
+            }
+        }
+    }
+
+    &__item {
+        display: flex !important;
+        justify-content: space-around;
+    }
+
+    &__content {
+        padding-top: 103px;
+        padding-left: 163px;
+    }
+
+    &__img {
+        padding-right: 100px;
     }
 }
 
