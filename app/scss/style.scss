@@ -692,34 +692,99 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 30px;
+        .articles-item {
+            z-index: 20;
+    
+            &__img-box {
+                height: 250px;
+                width: 370px;
+            }
+    
+            &__content {
+                position: relative;
+                height: 169px;
+                background-color: #fff;
+                padding-top: 34px;
+                
+            }
+    
+            &__link {
+                width: 103px;
+                height: 30px;
+                @extend %poppins-700;
+                font-size: 14px;
+                line-height: 20px;
+                text-transform: uppercase;
+                color: #fff;
+                background-color: $accent-blue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 16px;
+                position: absolute;
+                top: -15px;
+                left: 28px;
+    
+            }
+    
+            &__text {
+                @extend %dmsans-500;
+                font-size: 18px;
+                color: #262626;
+                max-width: 276px;
+                line-height: 24px;
+            }
+    
+            &__date-box {
+                min-height: 60px;
+                padding: 18px 33px 25px;
+                background-color: #fff;
+                position: relative;
+                &::after{
+                content: "";
+                position: absolute;
+                background-image: url(../images/stick1.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 315px;
+                height: 1px;
+                top: 0;
+                right: 28px;
+                }
+    
+                span {
+                    @extend %rubik-400;
+                    font-size: 12px;
+                    padding-right: 30px;
+                    color:  #222933;
+                }
+            }
+    
+            &__content-box {
+                height: 87px;
+                padding-bottom: 18px;
+                padding-left: 28px;
+                background-color: #fff;
+            }
+        }
     }
 
-    .articles-item {
-        &__img-box {
-            height: 250px;
-            width: 370px;
-        }
 
-        &__content {
-            z-index: 3;
-        }
+}
 
-        &__link {
-            width: 103px;
-            height: 30px;
-            @extend %poppins-700;
-            font-size: 14px;
-            line-height: 20px;
-            text-transform: uppercase;
-            color: #fff;
-            background-color: $accent-blue;
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
-            border-radius: 16px;
-            margin: -15px 0 0 28px;
-            
-        }
+.partners {
+    background-color: #fef7f0;
+    height: 437px;
+    margin-top: -168px;
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 270px;
+    }
+    &__item{
+        padding: 0 45px;
     }
 }
 
