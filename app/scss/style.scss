@@ -1128,16 +1128,17 @@
         background-color: #fff;
         box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
     }
+
     &__member-social {
         display: flex;
     }
-    
+
     &__member-social img {
         width: 41px;
         height: 41px;
         margin-left: 9px
     }
-    
+
     &__member-name {
         @extend %poppins-700;
         font-size: 22px;
@@ -1145,42 +1146,127 @@
         color: $accent-dark;
         margin-bottom: 5px;
     }
-    
+
     &__member-position {
         @extend %rubik-400;
         font-size: 16px;
         line-height: 30px;
         color: #565872;
     }
-    
+
 }
+
 .acticles__about,
-.acticles__terms{
+.acticles__terms {
     padding-top: 0;
 }
-.types{
+
+.types {
     color: $subtitle;
     padding: 114px 0 70px;
-    ol{
+
+    ol {
         margin-bottom: 48px;
     }
-    h3{
+
+    h3 {
         @extend %rubik-700;
         font-size: 24px;
         line-height: 40px;
         margin-bottom: 10px;
     }
+
     li,
-    p{
+    p {
         @extend %rubik-500;
         font-size: 16px;
         line-height: 30px;
         margin-bottom: 17px;
     }
 }
-.personal__collection{
+
+.personal__collection {
     margin-bottom: 48px;
 }
+
+.login {
+    padding: 109px 0 117px;
+
+    &__form {
+        text-align: left;
+        @extend %rubik-700;
+        font-size: 14px;
+        color: $accent-dark;
+        display: flex;
+        flex-direction: column;
+        width: 470px;
+        margin: 0 auto;
+    }
+
+    &__form a {
+        @extend %rubik-700;
+        font-size: 14px;
+        color: $accent-dark;
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    &__input {
+        height: 60px;
+        border: 2px solid #f6f6f6;
+        margin-top: 10px;
+        margin-bottom: 27px;
+    }
+    &__button{
+        margin-top: 10px;
+        border: none;
+        background-color: $accent-blue;
+        color: #fff;
+        @extend %rubik-500;
+        font-size: 18px;
+        padding: 20px 0;
+        margin-bottom: 35px;
+    }
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 33px;
+        border-bottom: 2px solid #f6f6f6;
+        label{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        input{
+            margin-right: 10px;
+        }
+    }
+    &__register{
+        text-align: center;
+        margin-bottom: 25px;
+        margin-top: 25px;
+    }
+    a.login__create{
+        text-align: center;
+        @extend %rubik-700;
+        font-size: 20px;
+        border: 2px solid $subtitle;
+        padding: 20px 0;
+    }
+}
+
+.login__partners{
+    margin-top: 0;
+    height: 250px;
+   }
+
+   .login__partners--inner{
+    padding-top: 75px;
+   }
 
 
 
