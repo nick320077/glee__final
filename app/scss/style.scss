@@ -16,7 +16,7 @@
 }
 
 .menu {
-    padding-left: 73px;
+    padding-left: 162px;
 
     &__list {
         display: flex;
@@ -692,22 +692,23 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 30px;
+
         .articles-item {
             z-index: 20;
-    
+
             &__img-box {
                 height: 250px;
                 width: 370px;
             }
-    
+
             &__content {
                 position: relative;
                 height: 169px;
                 background-color: #fff;
                 padding-top: 34px;
-                
+
             }
-    
+
             &__link {
                 width: 103px;
                 height: 30px;
@@ -724,9 +725,9 @@
                 position: absolute;
                 top: -15px;
                 left: 28px;
-    
+
             }
-    
+
             &__text {
                 @extend %dmsans-500;
                 font-size: 18px;
@@ -734,32 +735,33 @@
                 max-width: 276px;
                 line-height: 24px;
             }
-    
+
             &__date-box {
                 min-height: 60px;
                 padding: 18px 33px 25px;
                 background-color: #fff;
                 position: relative;
-                &::after{
-                content: "";
-                position: absolute;
-                background-image: url(../images/stick1.jpg);
-                background-repeat: no-repeat;
-                background-size: cover;
-                width: 315px;
-                height: 1px;
-                top: 0;
-                right: 28px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background-image: url(../images/stick1.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 315px;
+                    height: 1px;
+                    top: 0;
+                    right: 28px;
                 }
-    
+
                 span {
                     @extend %rubik-400;
                     font-size: 12px;
                     padding-right: 30px;
-                    color:  #222933;
+                    color: #222933;
                 }
             }
-    
+
             &__content-box {
                 height: 87px;
                 padding-bottom: 18px;
@@ -783,9 +785,404 @@
         align-items: center;
         padding-top: 270px;
     }
-    &__item{
+
+    &__item {
         padding: 0 45px;
     }
 }
+
+.top {
+    &__inner {
+        height: 124px;
+        background-color: #edf1f4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__title {
+        @extend %rubik-300;
+        font-size: 36px;
+        color: #222933;
+    }
+
+    .breadcrumbs {
+        &__list {
+            display: flex;
+        }
+
+        &__item {
+            color: #979ba0;
+            padding: 0 10px;
+        }
+
+        &__item--first {
+            position: relative;
+
+            &::after {
+                content: "/";
+                position: absolute;
+                width: 8px;
+                height: 13px;
+                color: #888c91;
+                top: 4px;
+                right: -6px;
+            }
+        }
+
+        &__link {
+            @extend %rubik-400;
+            font-size: 14px;
+            line-height: 24px;
+            color: inherit;
+        }
+
+    }
+}
+
+.creative {
+    padding: 119px 0;
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item-box {
+        width: 570px;
+        height: 675px;
+        margin-right: 46px;
+    }
+
+    &__item--content {
+        padding-top: 85px;
+    }
+
+    &__item-exp {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+
+        img {
+            padding-right: 30px;
+        }
+    }
+
+    &__item-descr {
+        padding-top: 20px;
+
+        p {
+            @extend %rubik-400;
+            font-size: 16px;
+            line-height: 30px;
+            color: $subtitle;
+        }
+    }
+
+    &__item-title {
+        @extend %rubik-700;
+        font-size: 36px;
+        color: $subtitle;
+        margin-bottom: 36px;
+    }
+
+    &__item-text {
+        @extend %rubik-400;
+        font-size: 16px;
+        line-height: 30px;
+        color: $subtitle;
+        padding-bottom: 50px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            background-image: url(../images/after.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 500px;
+            height: 2px;
+            left: 0;
+        }
+    }
+
+    &__item-projects {
+        padding-top: 37px;
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    &__item-project {
+        padding-left: 56px;
+        position: relative;
+        padding-right: 64px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 9px;
+        }
+    }
+
+    &__item-project--first {
+        position: relative;
+
+        &::before {
+            background-image: url(../images/creat-1.png);
+            width: 37px;
+            height: 38px;
+
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url(../images/rect-creat.png);
+            height: 81px;
+            width: 1px;
+            right: 30px;
+            top: -5px;
+        }
+    }
+
+
+    &__item-project--second {
+        position: relative;
+
+        &::before {
+            background-image: url(../images/creat-2.png);
+            width: 42px;
+            height: 40px;
+
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url(../images/rect-creat.png);
+            height: 81px;
+            width: 1px;
+            right: 30px;
+            top: -5px;
+        }
+    }
+
+
+
+
+    &__item-project--third::before {
+        position: absolute;
+        background-image: url(../images/creat-3.png);
+        width: 41px;
+        height: 41px;
+
+    }
+
+    &__item-project__title {
+        @extend %rubik-700;
+        font-size: 36px;
+        line-height: 38px;
+        color: $subtitle;
+        margin-bottom: 7px;
+    }
+
+    &__item-project__descr {
+        @extend %rubik-700;
+        font-size: 16px;
+        line-height: 17px;
+        color: #585858;
+    }
+}
+
+.achievements {
+    background-color: $accent;
+    padding: 95px 0 80px;
+
+    &__items {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 74px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__item--second {
+        img {
+            width: 73px;
+            height: 52px;
+        }
+    }
+
+    &__item--third {
+        img {
+            width: 79px;
+            height: 64px;
+        }
+    }
+
+    &__item--forth {
+        img {
+            width: 61px;
+            height: 64px;
+        }
+    }
+
+    &__item-title {
+        @extend %dmsans-700;
+        font-size: 36px;
+        color: $subtitle;
+        margin-bottom: 10px;
+    }
+
+    &__item-descr {
+        @extend %dmsans-700;
+        font-size: 18px;
+        line-height: 32px;
+        color: $subtitle;
+    }
+}
+
+.team {
+    padding: 117px 0 173px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__about {
+        max-width: 308px;
+        color: $subtitle;
+    }
+
+    &__about-title {
+        @extend %rubik-700;
+        font-size: 36px;
+        margin-bottom: 28px;
+    }
+
+    &__about-text {
+        @extend %rubik-400;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 36px;
+    }
+
+    &__about-link {
+        @extend %poppins-700;
+        font-size: 15px;
+        line-height: 55px;
+        color: #fff;
+        background-color: #a3bbc8;
+        padding: 16px 60px 16px 18px;
+        border-radius: 5px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url(../images/arrow--link.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 15px;
+            height: 11px;
+            top: 21px;
+            right: 21px;
+
+        }
+    }
+
+    &__members {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 100px 30px;
+    }
+
+    &__member {
+        position: relative;
+    }
+
+    &__member-info {
+        position: absolute;
+        padding: 26px 24px;
+        display: flex;
+        justify-content: space-between;
+        min-width: 324px;
+        align-items: center;
+        bottom: -68px;
+        background-color: #fff;
+        box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    }
+    &__member-social {
+        display: flex;
+    }
+    
+    &__member-social img {
+        width: 41px;
+        height: 41px;
+        margin-left: 9px
+    }
+    
+    &__member-name {
+        @extend %poppins-700;
+        font-size: 22px;
+        line-height: 26px;
+        color: $accent-dark;
+        margin-bottom: 5px;
+    }
+    
+    &__member-position {
+        @extend %rubik-400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #565872;
+    }
+    
+}
+.acticles__about,
+.acticles__terms{
+    padding-top: 0;
+}
+.types{
+    color: $subtitle;
+    padding: 114px 0 70px;
+    ol{
+        margin-bottom: 48px;
+    }
+    h3{
+        @extend %rubik-700;
+        font-size: 24px;
+        line-height: 40px;
+        margin-bottom: 10px;
+    }
+    li,
+    p{
+        @extend %rubik-500;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 17px;
+    }
+}
+.personal__collection{
+    margin-bottom: 48px;
+}
+
+
+
 
 @import 'media';
