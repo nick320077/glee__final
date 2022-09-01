@@ -410,92 +410,6 @@
         color: $title;
     }
 
-    .products-items {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 40px 30px;
-    }
-
-    .products-item {
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: column;
-        max-width: 270px;
-        min-height: 380px;
-        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-        text-align: center;
-        border-radius: 10px;
-
-
-        &__img-box {
-            position: relative;
-            overflow: hidden;
-        }
-
-        &__link-box {
-            position: absolute;
-            bottom: 72px;
-            left: 0;
-            right: 0;
-            transform: translateY(300%);
-            transition: all .3s;
-        }
-
-        &__link {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            background-color: #fff;
-            box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-            width: 45px;
-            height: 45px;
-            transition: all .3s;
-            margin: 0 7px;
-
-            path {
-                transition: all .3s;
-            }
-        }
-
-        &__link:hover {
-            path {
-                fill: #fff;
-            }
-
-            background-color: $accent-blue;
-        }
-
-        &__img {
-            margin: 0 auto;
-            padding: 28px 0 75px;
-            object-fit: cover;
-        }
-
-        &__title {
-            font-size: 16px;
-            line-height: 40px;
-            @extend %dmsans-700;
-            color: $subtitle;
-        }
-
-        &__info-box {
-            padding-bottom: 35px;
-        }
-
-        &__price {
-            font-size: 16px;
-            @extend %dmsans-700;
-            color: $accent-blue;
-            margin-bottom: 35px;
-        }
-
-        &:hover {
-            .products-item__link-box {
-                transform: translateY(0);
-            }
-        }
-    }
 
 
 }
@@ -1471,12 +1385,16 @@
     }
 }
 
-.products-tabs{
+
+
+.products-tabs {
     padding: 0 0 111px;
-    &__box{
-     margin-bottom: 35px;
+
+    &__box {
+        margin-bottom: 35px;
     }
-    &__btn{
+
+    &__btn {
         padding: 0;
         width: 241px;
         height: 53px;
@@ -1490,34 +1408,101 @@
         color: $subtitle;
         background-color: #edf1f4;
         transition: all .3s;
-        &.products-tabs__btn--active{
+
+        &.products-tabs__btn--active {
             background-color: $accent-blue;
             color: #fff;
         }
-       
+
     }
-    &__content{
+
+    &__content {
         @extend %rubik-500;
         font-size: 16px;
         line-height: 30px;
     }
-    &__tab{
+
+    &__tab {
         display: none;
-        &.products-tabs__tab--active{
+
+        &.products-tabs__tab--active {
             display: block;
-            
+
         }
     }
 
-    
+
 }
-.related{
-    &__title{
+
+
+.related {
+    &__title {
         @extend %dmsans-700;
         font-size: 36px;
         color: $subtitle;
+        margin-bottom: 25px;
     }
-    
+
+    .slick-slider button {
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: 2px solid;
+        border-color: $accent-blue;
+        font-size: 0;
+        border-radius: 5px;
+    }
+
+    .slixk-slider {
+        position: relative;
+    }
+
+    .slick-prev {
+        position: absolute;
+        right: 70px;
+        top: -70px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url(../images/product/sl-2.png);
+            width: 22px;
+            height: 9px;
+            left: 13px;
+            top: 42%;
+        }
+
+    }
+
+    .slick-next {
+        position: absolute;
+        right: 0;
+        top: -70px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url(../images/product/sl-1.png);
+            width: 22px;
+            height: 9px;
+            left: 13px;
+            top: 42%;
+        }
+    }
+
+    .slick-slider .slick-disabled {
+        border-color: #edf1f4;
+    }
+
+     .related__slider .slick-list {
+        padding-top: 45px;
+        padding-bottom: 45px;
+        padding-left: 12px;
+    }
+
+    &__articles{
+        padding-top: 76px;
+    }
 }
 
 

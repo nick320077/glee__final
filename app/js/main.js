@@ -1,10 +1,12 @@
 $(function () {
   $('.related__slider').slick({
-    arrows: true,
+    // arrows: true,
     autoplay: true,
     autoplaySpeed: 2000,
     slidesToShow: 4,
-    draggable: true,
+    infinite: false,  
+    
+    
   });
 
   $('.products-tabs__btn').on('click', function (e) {
@@ -45,8 +47,8 @@ $(function () {
     normalFill: "#d6d6d6",
     ratedFill: "#ffcc00",
   });
-  var mixer = mixitup('.products-items');
-  var mixer = mixitup('.design__items');
+  // var mixer = mixitup('.products-items');
+  // var mixer = mixitup('.design__items');
 
 });
 
