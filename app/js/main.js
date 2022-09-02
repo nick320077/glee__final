@@ -1,12 +1,15 @@
 $(function () {
   $('.related__slider').slick({
-    // arrows: true,
     autoplay: true,
     autoplaySpeed: 2000,
     slidesToShow: 4,
     infinite: false,  
     
     
+  });
+  $(".product-second__price-input").ionRangeSlider({
+    type: "double",
+    prefix: "$"
   });
 
   $('.products-tabs__btn').on('click', function (e) {
@@ -44,6 +47,11 @@ $(function () {
   });
   $(".star").rateYo({
     starWidth: "18px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+  });
+  $(".recent-products__star").rateYo({
+    starWidth: "11px",
     normalFill: "#d6d6d6",
     ratedFill: "#ffcc00",
   });
