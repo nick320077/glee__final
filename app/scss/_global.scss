@@ -110,3 +110,59 @@ body{
     }
 }
 
+.just-title {
+    @extend %dmsans-700;
+    font-size: 18px;
+    color: $subtitle;
+    margin-bottom: 23px;
+    position: relative;
+
+    &::after {
+        content: " ";
+        position: absolute;
+        background-image: url(../images/product/slice.png);
+        width: 39px;
+        height: 3px;
+        margin-left: 15px;
+        top: 8px;
+    }
+}
+
+.product-second__recent-title {
+    margin-bottom: 35px;
+}
+.product-second__price-filter{
+    margin-bottom: 120px;
+}
+.filter {
+    margin-bottom: 64px;
+}
+.recent-products {
+    &__item {
+        display: flex;
+        margin-bottom: 24px;
+
+    }
+
+    &__img {
+        
+        width: 71px;
+        height: 71px;
+    }
+
+    &__box {
+        padding: 5px 0;
+        @extend %rubik-400;
+        font-size: 14px;
+        line-height: 15.8px;
+        color: #333333;
+        text-align-last: left;
+
+        h4,
+        div {
+            margin-bottom: 9px;
+        }
+    }
+}
+
+
