@@ -55,8 +55,15 @@ $(function () {
     normalFill: "#d6d6d6",
     ratedFill: "#ffcc00",
   });
-  // var mixer = mixitup('.products-items');
-  // var mixer = mixitup('.design__items');
+  var mixer = mixitup('.products-items');
+  var mixer = mixitup('.design__items');
+
+
+  
+
+
 
 });
+
+
 
