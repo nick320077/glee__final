@@ -164,5 +164,29 @@ body{
         }
     }
 }
+.pagination {
+    display: flex;
+    text-align: center;
+    margin-bottom: 118px;
+    transform: translateX(-75px);
+    margin-top: -43px;
+
+    a {
+        display: inline-flex;
+        padding: 14px 18px;
+        border: 1px solid $accent-blue;
+        justify-content: center;
+        align-items: center;
+        @extend %rubik-400;
+        font-size: 16px;
+        color: $subtitle;
+
+        &:first-child {
+            background-color: $accent-blue;
+            color: #fff;
+        }
+
+    }
+}
 
 

@@ -1698,30 +1698,7 @@
     padding: 0;
 }
 
-.pagination {
-    display: flex;
-    text-align: center;
-    margin-bottom: 118px;
-    transform: translateX(-75px);
-    margin-top: -43px;
 
-    a {
-        display: inline-flex;
-        padding: 14px 18px;
-        border: 1px solid $accent-blue;
-        justify-content: center;
-        align-items: center;
-        @extend %rubik-400;
-        font-size: 16px;
-        color: $subtitle;
-
-        &:first-child {
-            background-color: $accent-blue;
-            color: #fff;
-        }
-
-    }
-}
 
 .posts {
     padding-top: 120px;
@@ -1783,6 +1760,10 @@
 
         }
     }
+    &__pagination{
+        margin-top: 77px;
+        transform: translateX(-36%);
+    }
 
 }
 
@@ -1803,7 +1784,7 @@
         align-items: center;
         background-color: $accent-blue;
         position: absolute;
-        bottom: 77px;
+        bottom: 0;
         @extend %dmsans-500;
         font-size: 12px;
         line-height: 30px;
@@ -1869,6 +1850,27 @@
         font-size: 16px;
         line-height: 30px;
         color: $subtitle;
+        margin-bottom: 39px;
+    }
+    &__link{
+        position: relative;
+        display: inline-block;
+        color: $accent-blue;
+        border: 1px solid $accent-blue;
+        @extend %rubik-400;
+        padding: 20px 85px 20px 20px;
+        &::after{
+            content: "";
+            position: absolute;
+            background-image: url(../images/link-arr.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 22px;
+            height: 9px;
+            right: 20px;
+            top: 25px;
+        }
+
     }
 }
 
